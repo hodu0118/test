@@ -1,11 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
-  background: #111827;
-  color: white;
+  padding: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 15% 10%,
+      rgba(255, 230, 109, 0.16 ),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 90%,
+      rgba(126, 112, 255, 0.2),
+      transparent 34%
+    ),
+    #111827;
+
+  color: #ffffff;
   font-family: "NeoDunggeunmo Pro", sans-serif;
 }
 
-h1 {
+/* 메인 카드 */
+.card {
+  width: min(100%, 680px);
+  padding: 48px 40px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.085);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 28px;
+
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.4),
+    inset 0 1px rgba(255, 255, 255, 0.13);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* 로고 */
+.logo {
   color: #ffe66d;
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 0 #695c25;
+}
+
+/* 제목 */
+h1 {
+  margin: 24px 0 18px;
+
+  color: #ffe66d;
+  font-size: clamp(42px, 8vw, 76px);
+  line-height: 1.05;
+
+  text-shadow:
+    3px 3px 0 #705f25,
+    0 0 24px rgba(255, 230, 109, 0.2);
+}
+
+/* 설명 */
+.description {
+  margin: 0 auto;
+  color: #d7d9e7;
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+/* 버튼 영역 */
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+/* 공통 버튼 */
+.button {
+  display: inline-block;
+  padding: 14px 22px;
+
+  border-radius: 12px;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Discord 버튼 */
+.discord-button {
+  color: #171923;
+  background: #ffe66d;
+  box-shadow: 0 8px 22px rgba(255, 230, 109, 0.22);
+}
+
+/* 두 번째 버튼 */
+.server-button {
+  color: #ffe66d;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 230, 109, 0.4);
+}
+
+/* hover 효과 */
+.button:hover {
+  transform: translateY(-5px);
+}
+
+.discord-button:hover {
+  color: #171923;
+  background: #ffffff;
+  box-shadow: 0 14px 30px rgba(255, 230, 109, 0.38);
+}
+
+.server-button:hover {
+  color: #171923;
+  background: #ffe66d;
+  box-shadow: 0 10px 24px rgba(255, 230, 109, 0.22);
+}
+
+/* 버튼을 누르는 순간 */
+.button:active {
+  transform: translateY(-1px);
+}
+
+/* 서버 정보 3개 */
+.server-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  margin-top: 34px;
+}
+
+.info-box {
+  padding: 16px 10px;
+
+  background: rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+}
+
+.info-title {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #aeb4c5;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.info-box strong {
+  color: #ffe66d;
+  font-size: 15px;
+}
+
+/* 관리진 리스트 */
+.admin-list {
+  margin-top: 28px;
+
+  text-align: left;
+
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+
+  overflow: hidden;
+}
+
+/* 열고 닫는 제목 */
+.admin-list summary {
+  padding: 18px 20px;
+
+  color: #ffe66d;
+  cursor: pointer;
+  list-style: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+/* 기본 삼각형 제거 */
+.admin-list summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 직접 만든 열림/닫힘 표시 */
+.admin-list summary::after {
+  content: "+";
+  float: right;
+  color: #ffffff;
+  font-size: 22px;
+  transition: transform 0.2s ease;
+}
+
+.admin-list[open] summary::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+
+.admin-list summary:hover {
+  background: rgba(255, 230, 109, 0.12);
+  color: #ffffff;
+}
+
+/* 관리진 내용 */
+.admin-content {
+  display: grid;
+  gap: 10px;
+
+  padding: 0 16px 16px;
+}
+
+/* 관리자 한 명 */
+.admin {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px;
+
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.admin:hover {
+  transform: translateX(5px);
+  background: rgba(255, 230, 109, 0.13);
+}
+
+.admin-icon {
+  display: grid;
+  place-items: center;
+
+  width: 34px;
+  height: 34px;
+
+  color: #171923;
+  background: #ffe66d;
+  border-radius: 10px;
+}
+
+.admin strong {
+  color: #ffffff;
+  font-size: 17px;
+}
+
+.admin p {
+  margin: 5px 0 0;
+  color: #aeb4c5;
+  font-size: 13px;
+}
+
+/* 푸터 */
+footer {
+  margin-top: 30px;
+  color: #858ba2;
+  font-size: 13px;
+}
+
+/* 모바일 화면 */
+@media (max-width: 600px) {
+  body {
+    padding: 14px;
+    align-items: flex-start;
+  }
+
+  .card {
+    margin-top: 20px;
+    padding: 34px 20px;
+  }
+
+  .server-info {
+    grid-template-columns: 1fr;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .button {
+    width: 100%;
+  }
 }
