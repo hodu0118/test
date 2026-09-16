@@ -3,42 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="귀엽고 안정적인 마인크래프트 서버 호스팅">
+  <title>Noobis Hosting</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/neodgm/neodgm-pro-webfont@latest/neodgm_pro/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">N</span> NOOBIS</a>
+    <nav class="nav-links" aria-label="주 메뉴">
+      <a href="#plans">요금제</a>
+      <a href="#features">특징</a>
+      <a href="https://discord.gg/PjSJa5eWjA" target="_blank" rel="noreferrer">Discord ↗</a>
+    </nav>
+  </header>
 
-  <body><header>
-  <div>NOOBIS</div>
-
-  <nav>
-    <a href="#plans">요금제</a>
-    <a href="#about">소개</a>
-    <a href="#contact">문의</a>
-  </nav>
-</header>
-    
-<main>
-  <section class="intro">
-    <p>NOOBIS HOSTING</p>
-
-    <h1>
-      무료인데도 강력한
-      <span>마인크래프트 호스팅</span>
-    </h1>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">NOOBIS HOSTING <span>✦</span></p>
+        <h1>강력하고 안정적인<br><em>마인크래프트 호스팅</em></h1>
+        <p class="hero-description">작은 서버부터 큰 모험까지,<br>귀엽고 편리하게 시작해 보세요.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#plans">요금제 구경하기 <span>→</span></a>
+          <a class="text-button" href="https://discord.gg/PjSJa5eWjA" target="_blank" rel="noreferrer">Discord 문의</a>
+        </div>
+      </div>
+      <div class="hero-bubble" aria-hidden="true"><span>☁</span><small>server<br>online!</small></div>
     </section>
-  <section id="plans">
-  <h2>호스팅 요금제</h2>
 
-  <article class="plan">
-    <h3>일반</h3>
-    <p class="price">무료</p>
+    <section id="features" class="feature-strip" aria-label="서비스 특징">
+      <div><span class="feature-icon">⚡</span><strong>빠른 속도</strong><small>끊김 없이 쾌적하게</small></div>
+      <div><span class="feature-icon">♡</span><strong>쉬운 관리</strong><small>처음이어도 간단하게</small></div>
+      <div><span class="feature-icon">✦</span><strong>안정적인 운영</strong><small>언제나 든든하게</small></div>
+    </section>
 
-    <ul>
-      <li>10GB 저장공간</li>
-      <li>도메인 1개</li>
-      <li>백업 1개</li>
-      <li>서버 1개</li>
-    </ul>
+    <section id="plans" class="plans-section">
+      <div class="section-heading"><p class="eyebrow">PLANS</p><h2>마음에 드는 플랜을<br><span>골라보세요!</span></h2><p>처음 시작하는 분부터 든든한 서버까지 준비했어요.</p></div>
+      <div class="plans-grid">
+        <article class="plan-card">
+          <p class="plan-label">가볍게 시작</p><h3>일반</h3><p class="price">무료 <small>/ forever</small></p>
+          <ul><li>10GB 저장공간</li><li>도메인 1개 (mc.kr)</li><li>백업 1개</li><li>서버 1개</li></ul>
+          <a class="plan-button" href="payment.html?plan=free">사용하기 <span>→</span></a>
+        </article>
+        <article class="plan-card">
+          <p class="plan-label">조금 더 넉넉하게</p><h3>Plus Iron</h3><p class="price">₩25,000 <small>/ 월</small></p>
+          <ul><li>17GB 저장공간</li><li>도메인 2개 (mv.kr)</li><li>백업 3개</li><li>서버 3개</li></ul>
+          <a class="plan-button muted" href="payment.html?plan=iron">자세히 보기 <span>→</span></a>
+        </article>
+        <article class="plan-card featured"><span class="recommend">추천!</span><p class="plan-label">가장 인기 있어요</p><h3>Plus Gold</h3><p class="price">₩40,000 <small>/ 월</small></p>
+          <ul><li>25GB 저장공간</li><li>도메인 3개 (mv.kr)</li><li>자동 백업 +4개</li><li>서버 3개</li></ul>
+          <a class="plan-button" href="payment.html?plan=gold">구매하기 <span>→</span></a>
+        </article>
+        <article class="plan-card"><p class="plan-label">아낌없이 든든하게</p><h3>Plus Diamond</h3><p class="price">₩70,000 <small>/ 월</small></p>
+          <ul><li>30GB 저장공간</li><li>도메인 3개 (mv.kr)</li><li>자동 백업 +4개</li><li>서버 3개</li></ul>
+          <a class="plan-button" href="payment.html?plan=diamond">구매하기 <span>→</span></a>
+        </article>
+      </div>
+    </section>
+  </main>
 
-    <a href="payment.html?plan=free">사용하기</a>
-  </article>
-</section>
-
-    </body>
+  <footer><span>☁</span> © 2026 Noobis Hosting <span>♡</span></footer>
+</body>
+</html>
