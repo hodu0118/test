@@ -1,29 +1,92 @@
-<style>
-  body {
-    margin: 0;
-    min-height: 100vh;
-    background: #111827;
-    color: white;
-    font-family: "NeoDunggeunmo Pro", sans-serif;
-  }
-</style>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Noobis Hosting</title>
+
+  <!-- Neo둥근모 Pro -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/neodgm/neodgm-pro-webfont@latest/neodgm_pro/style.css"
+  >
+
+  <!-- 내가 만든 CSS 연결 -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Noobis란, 혁신이다</h1>
+  <main class="card">
+    <div class="logo">NOOBIS HOSTING</div>
 
-  <p>
-    뉴비스 호스팅 이용 고객님  
+    <h1>Noobis란,  
+혁신이다.</h1>
 
-    안녕하세요?  
+    <p class="description">
+      뉴비스 호스팅 이용 고객님, 안녕하세요?  
 
-    무료인데도 성능은 끝내주는 호스팅이  
+      무료인데도 성능은 끝내주는 호스팅이  
 
-    여기있어요!
-  </p>
+      여기 있어요!
+    </p>
 
-  <a class="button" href="https://discord.gg/PjSJa5eWjA">
-    Discord 바로가기 →
-  </a>
+    <div class="buttons">
+      <a
+        class="button discord-button"
+        href="https://discord.gg/PjSJa5eWjA"
+        target="_blank"
+      >
+        Discord 바로가기 →
+      </a>
+
+      <a class="button server-button" href="#admins">
+        관리진 보기 ↓
+      </a>
+    </div>
+
+    <section class="server-info">
+      <div class="info-box">
+        <span class="info-title">STATUS</span>
+        <strong>ONLINE</strong>
+      </div>
+
+      <div class="info-box">
+        <span class="info-title">TYPE</span>
+        <strong>HOSTING</strong>
+      </div>
+
+      <div class="info-box">
+        <span class="info-title">VERSION</span>
+        <strong>NOOBIS</strong>
+      </div>
+    </section>
+
+    <details id="admins" class="admin-list">
+      <summary>관리진 리스트 &gt; &lt;</summary>
+
+      <div class="admin-content">
+        <div class="admin">
+          <span class="admin-icon">★</span>
+          <div>
+            <strong>Noob_1212</strong>
+            <p>Administrator</p>
+          </div>
+        </div>
+
+        <div class="admin">
+          <span class="admin-icon">★</span>
+          <div>
+            <strong>Mec130111</strong>
+            <p>Administrator</p>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <footer>
+      © 2026 Noobis Hosting
+    </footer>
+  </main>
 </body>
 </html>
